@@ -1,0 +1,29 @@
+<!--Задание со степенью-->
+
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="personCtrl">
+
+a: <input type="text" ng-model="a"><br>
+b: <input type="text" ng-model="b"><br>
+<br>
+Result a^b = {{result()}}
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('personCtrl', function($scope) {
+    $scope.a = 5;
+    $scope.b = 2;
+    $scope.result = function() {
+        return Math.pow($scope.a, $scope.b);
+    };
+});
+</script>
+
+</body>
+</html>
